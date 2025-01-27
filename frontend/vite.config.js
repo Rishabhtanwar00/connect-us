@@ -7,8 +7,15 @@ export default defineConfig({
 	plugins: [react()],
 	resolve: {
 		mainFields: [],
-	},
-	alias: {
-		axios: path.resolve(__dirname, 'node_modules', 'axios/dist/esm/axios.js'),
+		alias: [
+			{
+				find: 'axios',
+				replacement: path.resolve(
+					__dirname,
+					'node_modules',
+					'axios/dist/esm/axios.js'
+				),
+			},
+		],
 	},
 });
