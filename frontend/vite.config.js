@@ -6,5 +6,7 @@ export default defineConfig({
 	plugins: [react()],
 	resolve: {
 		mainFields: [],
-	},
+	},alias: {
+		axios: path.resolve(__dirname, 'node_modules', 'axios/dist/esm/axios.js'),
+	  },
 });
