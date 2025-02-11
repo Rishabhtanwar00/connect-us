@@ -617,7 +617,6 @@ option {
 
 	.profile-top img,
 	.profile img {
-		width: 200px;
 		margin: auto;
 	}
 
@@ -682,4 +681,13 @@ option {
 }
 .contant_box_404 {
 	margin-top: -50px;
+}
+.profile-btns {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.edit-profile-btn {
+	margin-top: 10px;
 }

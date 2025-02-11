@@ -23,16 +23,21 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
 				<Spinner />
 			) : (
 				<Fragment>
-					<Link to='/profiles' className='btn btn-dark'>
-						Back To Profiles
-					</Link>
-					{auth.isAuthenticated &&
-						auth.loading === false &&
-						auth.user._id === profile.user._id && (
-							<Link to='/edit-profile' className='btn btn-dark'>
-								Edit Profile
-							</Link>
-						)}
+					<div className=''>
+						<Link to='/profiles' className='btn btn-dark'>
+							Back To Profiles
+						</Link>
+						{auth.isAuthenticated &&
+							auth.loading === false &&
+							auth.user._id === profile.user._id && (
+								<Link
+									to='/edit-profile'
+									className='edit-profile-btn btn btn-dark'
+								>
+									Edit Profile
+								</Link>
+							)}
+					</div>
 					<div className='profile-grid my-1'>
 						<ProfileTop profile={profile} />
 						<ProfileAbout profile={profile} />
